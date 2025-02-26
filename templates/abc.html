@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Japanese</title>
+</head>
+<body>
+    <div id="cards-container"></div>
+
+    <script>
+        fetch('/api/characters')
+           .then(response => response.json())
+           .then(data => {
+                const container = document.getElementById('cards-container');
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `<h2>${item.character}<h2>
+                                      <p><<p><strong>Romanji:</strong>${item.romanji}</p>
+                                      <p><<p><strong></strong>${item.meaning}</p>
+                                      <p><<p><strong></strong>${item.type}</p>`;
+                    container.appendChild(card);
+                });
+           })
+    </script>
+</body>
+</html>
