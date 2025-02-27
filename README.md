@@ -4,9 +4,9 @@
 This is a web application designed to display **Hiragana, Katakana, and Kanji** characters along with their meanings and pronunciations. The application follows a **Flask (Python) back-end**, a **PostgreSQL database**, and an **HTML/CSS front-end**.
 
 # Index:
-# ⚙️ [back-end](#️-back-end)
-# 🛢️  [Database](#️--database)
-# 🎨 [Front-end](#-front-end)
+# ⚙️ [back-end](#backend-flask--sqlalchemy)
+# 🛢️  [Database](#database-postgresql--sqlalchemy)
+# 🎨 [Front-end](#frontend-html-css-jinja2)
 
 ##  Project Structure
 # 📂
@@ -24,8 +24,8 @@ Japanese-Alphabet/
 
 ---
 
-##  Backend (Flask & SQLAlchemy)
-#   ⚙️
+## Backend (Flask & SQLAlchemy)
+#  ⚙️
 The **Flask framework** handles routes and communicates with the **PostgreSQL database** through **SQLAlchemy ORM**.
 
 ### 🔧 Setup Flask & Dependencies
@@ -83,7 +83,7 @@ db.session.commit()
 
 ---
 
-##  Front-End (HTML, CSS, Jinja2)
+##  FrontEnd (HTML, CSS, Jinja2)
 #   🎨
 The front-end is built using **HTML templates** with **Jinja2** to dynamically render database data.
 
