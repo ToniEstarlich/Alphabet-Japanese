@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabet Japanese</title>
+    <title>Japanese Alphabet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div id="cards-container"></div>
+    <header>
+        <h1>Introduction to the Japanese Alphabet</h1>
+    </header>
 
-    <script>
-        fetch('/api/characters')
-           .then(response => response.json())
-           .then(data => {
-                const container = document.getElementById('cards-container');
-                data.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `<h2>${item.character}<h2>
-                                      <p><<p><strong>Romanji:</strong>${item.romanji}</p>
-                                      <p><<p><strong></strong>${item.meaning}</p>
-                                      <p><<p><strong></strong>${item.type}</p>`;
-                    container.appendChild(card);
-                });
-           })
-    </script>
+    <div class="content">
+        <h2>What is the Japanese Alphabet?</h2>
+        <p>The Japanese writing system consists of three alphabets: Hiragana, Katakana, and Kanji. Each alphabet serves a different purpose:</p>
+        
+        <h3>Hiragana (ひらがな)</h3>
+        <p>Hiragana is used for native Japanese words, particles, and grammatical elements. It is the first alphabet learners typically study.</p>
+
+        <h3>Katakana (カタカナ)</h3>
+        <p>Katakana is used for foreign words, names, and onomatopoeia. It is similar to Hiragana but has a distinct angular style.</p>
+
+        <h3>Kanji (漢字)</h3>
+        <p>Kanji are Chinese characters used in Japanese writing to represent whole words or concepts. There are thousands of Kanji characters, but about 2,000 are commonly used.</p>
+
+        <p>Click below to learn more about each alphabet:</p>
+
+        <div class="buttons">
+            <a href="{{ url_for('hiragana') }}" class="btn">Learn Hiragana</a>
+            <a href="{{ url_for('katakana') }}" class="btn">Learn Katakana</a>
+            <a href="{{ url_for('kanji') }}" class="btn">Learn Kanji</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Explore the beauty of the Japanese language!</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katakana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Katakana Characters</h1>
+    </header>
+
+    <div class="content">
+        <h2>Katakana Alphabet</h2>
+        <div class="alphabet">
+            {% for character in characters %}
+            <div class="card">
+                <div class="character">{{ character.character }}</div>
+                <div class="meaning">{{ character.meaning }}</div>
+                <div class="romaji">{{ character.romaji }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="buttons">
+            <a href="{{ url_for('abc') }}" class="btn">Back to Alphabet Overview</a>
+            <a href="{{ url_for('hiragana') }}" class="btn">Learn Hiragana</a>
+            <a href="{{ url_for('kanji') }}" class="btn">Learn Kanji</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Explore the beauty of the Japanese language!</p>
+    </footer>
+</body>
+</html>
