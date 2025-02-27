@@ -1,9 +1,15 @@
 # Japanese Alphabet Web App
-
+![Manga Gallery](static/images/kanji-screenshot.png)
 ## 📌 Project Overview
 This is a web application designed to display **Hiragana, Katakana, and Kanji** characters along with their meanings and pronunciations. The application follows a **Flask (Python) back-end**, a **PostgreSQL database**, and an **HTML/CSS front-end**.
 
-## 📂 Project Structure
+# Index:
+# ⚙️ [back-end](#️-back-end)
+# 🛢️  [Database](#️--database)
+# 🎨 [Front-end](#-front-end)
+
+##  Project Structure
+# 📂
 ```
 Japanese-Alphabet/
 │── static/         # CSS, images, and static files
@@ -18,7 +24,8 @@ Japanese-Alphabet/
 
 ---
 
-## ⚙️ Backend (Flask & SQLAlchemy)
+##  Backend (Flask & SQLAlchemy)
+#   ⚙️
 The **Flask framework** handles routes and communicates with the **PostgreSQL database** through **SQLAlchemy ORM**.
 
 ### 🔧 Setup Flask & Dependencies
@@ -49,7 +56,8 @@ The **Flask framework** handles routes and communicates with the **PostgreSQL da
 
 ---
 
-## 🛢️ Database (PostgreSQL & SQLAlchemy)
+##  Database (PostgreSQL & SQLAlchemy)
+#   🛢️
 The application uses **PostgreSQL** with his **pgAdmin4** as the database, and **SQLAlchemy** as the ORM.
 
 ### 📌 Table Structure
@@ -75,7 +83,8 @@ db.session.commit()
 
 ---
 
-## 🎨 Front-End (HTML, CSS, Jinja2)
+##  Front-End (HTML, CSS, Jinja2)
+#   🎨
 The front-end is built using **HTML templates** with **Jinja2** to dynamically render database data.
 
 ### 📌 Example `hiragana.html`
