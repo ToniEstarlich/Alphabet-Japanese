@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 from db import db  # Import db from db.py
-from models import Hiragana, Katakana, Kanji  # Import models
+from models import Hiragana, Katakana, Kanji  # Import models.py
 import os
 
 app = Flask(__name__)
